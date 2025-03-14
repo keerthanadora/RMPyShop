@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Hero Section -->
+    <div class="jumbotron text-center bg-primary text-white py-5">
+        <h1>Welcome to RMShop</h1>
+        <p>Your one-stop shop for amazing products!</p>
+        <a href="{% url 'products:index' %}" class="btn btn-light btn-lg">Shop Now</a>
+    </div>
+
+    <!-- New Arrivals -->
+    <h2 class="text-center mt-4">New Arrivals</h2>
+    <div class="row">
+        {% for product in new_arrivals %}
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">₹{{ product.price }}</p>
+                    <a href="{% url 'products:add_to_cart' product.id %}" class="btn btn-success">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Popular Categories -->
+    <h2 class="text-center mt-5">Shop by Category</h2>
+    <div class="row">
+        {% for category in categories %}
+        <div class="col-md-4 text-center">
+            <h4>{{ category }}</h4>
+            <a href="{% url 'products:index' %}?category={{ category }}" class="btn btn-info">View</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

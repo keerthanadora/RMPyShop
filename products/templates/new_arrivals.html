@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center mb-4">🆕 New Arrivals</h2>
+
+    <div class="row">
+        {% for product in latest_products %}
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text"><strong>₹{{ product.price }}</strong></p>
+                    <a href="{% url 'products:add_to_cart' product.id %}" class="btn btn-primary">🛒 Buy Now</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">No new arrivals yet!</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
