@@ -12,20 +12,6 @@
 - ✅ **New Arrivals Section** - Showcasing the latest products.
 - ✅ **Responsive UI** - User-friendly and mobile-optimized design.
 
----
-
-## 📸 Screenshots
-
-### 🏠 Home Page
-![Home Page](https://via.placeholder.com/800x400?text=Home+Page)
-
-### 🛍️ Product Listing
-![Product Page](https://via.placeholder.com/800x400?text=Product+Page)
-
-### 🛒 Shopping Cart
-![Cart Page](https://via.placeholder.com/800x400?text=Cart+Page)
-
----
 
 ## 🛠️ Installation & Setup
 
