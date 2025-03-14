@@ -34,4 +34,4 @@ If you discover a vulnerability or bugs within this project, please send an e-ma
 
 
 ## License
-The PyShop Project is free open-sourced project, yet to be licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The PyShop Project is free open-sourced project, yet to be licensed under the [MIT license](https://opensource.org/licenses/MIT)."# RMPyShop" 
